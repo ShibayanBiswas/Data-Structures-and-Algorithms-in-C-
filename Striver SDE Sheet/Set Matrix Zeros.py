@@ -27,22 +27,22 @@ def setZeros(matrix: List[List[int]]) -> None:
     # Declaring isZero boolean matrix.
     isZero = [[False for _ in range(m)] for _ in range(n)]
 	
-	# Traversing the original matrix.
+    # Traversing the original matrix.
     for i in range(n):
         for j in range(m):
 			
-			# If that element of the matrix is equal to 0.
+	    # If that element of the matrix is equal to 0.
             if matrix[i][j] == 0:
 				
-				# Traversing its complete column and setting all the isZero values to be true.
+	        # Traversing its complete column and setting all the isZero values to be true.
                 for k in range(n):
                     isZero[k][j] = True
 				
-				# Traversing its complete row and setting all the isZero values to be true.
+		# Traversing its complete row and setting all the isZero values to be true.
                 for k in range(m):
                     isZero[i][k] = True
 	
-	# Travrsing isZero and if isZero at an index is true then we replace that element with zero in original matrix.
+    # Travrsing isZero and if isZero at an index is true then we replace that element with zero in original matrix.
     for i in range(n):
         for j in range(m):
             if isZero[i][j]:
